@@ -1,0 +1,47 @@
+<ion-card  @fastFadeIn >
+  <div class="header">
+    <ion-button size="large" fill="clear" color="dark" (click)="playChapter()">
+      <ion-icon slot="icon-only" name="play"></ion-icon>
+    </ion-button>
+    <div class="title" (click)="expand()">
+      <p>{{ chapter.id }}. {{ chapter.name | chapterName}}</p>
+      <ion-chip *ngIf="viewed && !expanded" color="success">
+        <ion-label >Viewed</ion-label>
+      </ion-chip>
+    </div>
+    <ion-icon  
+    class="expandable"
+    [name]="'chevron-down-outline'" 
+    [@indicatorRotate]="expanded ? 'expanded': 'collapsed'" 
+    (click)="expand()" 
+    ></ion-icon>
+  </div>
+  <ion-card-content [ngStyle]="{'padding-bottom': expanded ? '13px' : '0px' }">
+    <app-chapter-item-expandable expandHeight="300px" [expanded]="expanded">
+      <div *ngIf="expanded" class="content" @fastFadeIn>
+        <div class="information" >
+          <ion-thumbnail>
+            <img alt="logo" [src]="chapter.thumbnail " (click)="playChapter()">
+          </ion-thumbnail>
+          <div class="options">
+            <div class="checked">
+              <ion-label [ngStyle]="{'color': viewed ? '#2DD36F' : '' }"> {{ viewed ? '' : 'NOT ' }}VIEWED </ion-label>
+              <ion-toggle (ionChange)="changeViewedStatus($event)" mode="ios" [(ngModel)]="viewed"></ion-toggle>
+            </div>
+            <ion-button *ngIf="!existInLocal" fill="clear" (click)="confirmDownload()">
+              <ion-icon name="download-outline" ></ion-icon>
+              Download
+            </ion-button>
+            <ion-button *ngIf="existInLocal" fill="clear" color="danger" (click)="deleteChapter(position)">
+              <ion-icon name="trash-outline"></ion-icon>
+              Delete
+            </ion-button>
+          </div>
+        </div>
+        <ion-label>
+          {{ chapter.name | chapterName : false}}
+        </ion-label>
+      </div>
+    </app-chapter-item-expandable>
+  </ion-card-content>
+</ion-card>

@@ -1,0 +1,12 @@
+<app-header-page [title]="'Saga Cell'"></app-header-page>
+
+<ion-content [fullscreen]="true">
+
+  <app-chapter-list 
+  [data]="chapterService.dataEpisodes.cell"
+  [folder]="data.folder"
+  [confirmText]="data.confirmText"
+  
+  ></app-chapter-list>
+
+</ion-content>

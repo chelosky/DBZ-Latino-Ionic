@@ -1,0 +1,12 @@
+<app-header-page [title]="'Saga Sayayin'"></app-header-page>
+
+<ion-content [fullscreen]="true">
+
+  <app-chapter-list 
+  [data]="chapterService.dataEpisodes.sayayin"
+  [folder]="data.folder"
+  [confirmText]="data.confirmText"
+  
+  ></app-chapter-list>
+
+</ion-content>

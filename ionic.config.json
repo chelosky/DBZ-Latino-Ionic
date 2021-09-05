@@ -1,0 +1,7 @@
+{
+  "name": "dbz-latino",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

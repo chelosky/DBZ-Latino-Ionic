@@ -1,0 +1,35 @@
+<ion-tabs #tabs (ionTabsDidChange)="setSelectedTab()">
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="tab1" class="sayayin">
+      <ion-icon [src]="'assets/1-sayayin.svg'"></ion-icon>
+      <ion-label>Sayayin</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab2" class="freezer">
+      <ion-icon [src]="'assets/2-freezer.svg'"></ion-icon>
+      <ion-label>Freezer</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab3" class="garlic">
+      <ion-icon [src]="'assets/3-garlic.svg'" ></ion-icon>
+      <ion-label>Garlic</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab4" class="cell">
+      <ion-icon [src]="'assets/4-cell.svg'"></ion-icon>
+      <ion-label>Cell</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab5" class="buu">
+      <ion-icon [src]="'assets/5-buu.svg'"></ion-icon>
+      <ion-label>Buu</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab6" class="movies">
+      <ion-icon [src]="'assets/6-movies.svg'"></ion-icon>
+      <ion-label>Movies</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>

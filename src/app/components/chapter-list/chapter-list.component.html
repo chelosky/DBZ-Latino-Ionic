@@ -1,0 +1,16 @@
+<ion-searchbar animated (ionChange)="filterList( $event )"></ion-searchbar>
+  
+<ion-refresher slot="fixed" pullFactor="0.5" pullMin="100" pullMax="200" (ionRefresh)="doRefresh($event)">
+  <ion-refresher-content></ion-refresher-content>
+</ion-refresher>
+
+<ion-spinner name="crescent" *ngIf="!data || data.length === 0"></ion-spinner>
+
+<ion-list *ngIf="data && data.length !== 0">
+  <app-chapter-item *ngFor="let item of data | filterChapter: filterText: ['name', 'code']; index as pos" 
+  [chapter]="item"
+  [position]="pos"
+  [folder]="folder"
+  [confirmText]="confirmText"
+  ></app-chapter-item>
+</ion-list>
