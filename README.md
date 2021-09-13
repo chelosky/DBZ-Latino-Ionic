@@ -15,6 +15,11 @@ DBZ LATINO is available on the Google Play Store.
         height="80"
         src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" />
 </a>
+<a href="https://github.com/chelosky/DBZ-Latino-Ionic/releases/download/1.0.0/DBZLATINO-v1.0.0.apk">
+  <img alt="Get it on Google Play"
+      height="80"
+      src="https://user-images.githubusercontent.com/663460/26973090-f8fdc986-4d14-11e7-995a-e7c5e79ed925.png" />
+</a>
 
 ## About
 
